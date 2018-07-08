@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" href="360.css">
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+</head>
+<body>
+<img id="myImg" src="img/-Klark_0000.jpg" alt="Trolltunga, Norway" width="300" height="200">
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+    <span class="close">&times;</span>
+    <div class="init-button-360"></div>
+    <div class="container text-center">
+        <canvas id="360viewer" width="900" height="600" id="img01"></canvas>
+        <!--<canvas id="360viewer" width="458" height="458"></canvas>-->
+    </div>
+</div>
+<script src='https://code.createjs.com/easeljs-0.6.0.min.js'></script>
+<script src="360.js"></script>
+<script>$("#myImg").click(function(){
+    $('.slider-cont').slick({
+    // dots: true,
+    // infinite: true,
+    speed: 300,
+    slidesToShow: 1,
+    adaptiveHeight: true,
+        arrows: false
+});
+});
+</script>
+</body>
+</html>
